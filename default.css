@@ -1,0 +1,68 @@
+/* Seletores básicos */
+ * {
+    font-family: sans-serif;
+}
+p {
+    text-align: justify;
+}
+#com-id {
+    background-color: #ccc;
+}
+.p-classe {
+    background-color: aqua;
+}
+[data-attr="qualquer-atributo"] {
+    background-color: greenyellow;
+}
+
+/* ### Combinações ### */
+/* Irmão Adjacente */
+h1 + p {
+    font-weight: bold;
+}
+
+/* Todos os Irmãos */
+.paragrafo-destaque ~ p {
+    text-decoration: underline;
+}
+
+/* Filhos */
+fieldset > b {
+    background-color: blue;
+}
+
+/* Descendentes */
+fieldset em {
+    background-color: black;
+    color: white;
+}
+
+/* ### Pseudo-classes ### */
+/* 2º item de qualquer lista */
+li:nth-child(2) {
+    font-weight: bold;
+}
+
+/* Todos menos o 3º */
+li:not( li:nth-child(3) ) {
+    background-color: antiquewhite;
+}
+
+/* Ao posicionar o cursor em cima */
+li {
+    transition: transform 0.3s;
+}
+li:hover {
+    transform: scale(1.05);
+}
+
+/* Apenas nas listas que tenham span na descendencia */
+ul:has(span) {
+    border: solid 5px red;
+}
+
+/* Elementos sem qualquer conteúdo */
+div:empty {
+    border: solid 5px yellow;
+}
+
